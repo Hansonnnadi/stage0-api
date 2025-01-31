@@ -20,11 +20,4 @@ def get_info():
         "email": "hanson2510@gmail.com",  # Replace with your actual email
         "current_datetime": datetime.now(pytz.UTC).isoformat(),
         "github_url": "https://github.com/Hansonnnadi/stage0-api.git"  # Replace with your GitHub URL
-    }
-services:
-  - type: web
-    name: hng12-api
-    env: python
-    plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    }    
