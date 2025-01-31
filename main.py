@@ -16,9 +16,9 @@ app.add_middleware(
 
 @app.get("/")
 def get_info():
-    current_datetime = datetime.now(pytz.UTC).replace(microsecond=0).isoformat() + 'Z'
+    iso_date = datetime.now().replace(microsecond=0).isoformat()
     return {
         "email": "hanson2510@gmail.com",  # Replace with your actual email
-        "current_datetime": current_datetime,
+        "current_datetime": iso_date + 'Z',
         "github_url": "https://github.com/Hansonnnadi/stage0-api"  # Replace with your GitHub URL
     }    
